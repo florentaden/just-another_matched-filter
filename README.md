@@ -14,7 +14,7 @@ with pip:
 pip install mpi4py
 ```
 
-***JAMF*** has been written with HPC in mind but is also efficient with the CPUs of your
+***JAM*** has been written with HPC in mind but is also efficient with the CPUs of your
 home/office computer. It runs a template per CPU, the data to scan are loaded by only one CPU in each node and are accessible by all of the others CPUs of the node.
 Thus, the maximum number of required CPU should be less or equal to the number of template.
 
@@ -23,7 +23,7 @@ There is still a little bit of work to finalize the optimization of the memory u
 
 ## ***What you need***
 
-***JAMF*** requires that the templates are stored in a `numpy` archive (e.g. `.npz`, can be also hdf5..) containing 3 keys: ***header***, ***data***, ***moveout***. You can also re-write this part to suit your needs or contact me if you run into any problems.
+***JAM*** requires that the templates are stored in a `numpy` archive (e.g. `.npz`, can be also hdf5..) containing 3 keys: ***header***, ***data***, ***moveout***. You can also re-write this part to suit your needs or contact me if you run into any problems.
 
 The ***header*** key should give access to a list of headers that tells you which station and component you are looking at, for example: ***STA1.HHZ***.
 Can be anything as long as it matches your data.
